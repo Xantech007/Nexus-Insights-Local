@@ -1,8 +1,8 @@
 <?php
 class Database {
-    private $server = "mysql:host=localhost;dbname=nexuymmv_db";
-    private $username = "nexuymmv_db";
-    private $password = "Xander24427279";
+    private $server = "mysql:host=sql204.infinityfree.com;dbname=if0_40415630_db";
+    private $username = "if0_40415630";
+    private $password = "Oa8DAvaEmcByE4q";
     private $options = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
