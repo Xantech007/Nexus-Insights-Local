@@ -86,7 +86,7 @@
                         }
                       }
                       catch(PDOException $e){
-                        echo $e->getMessage();
+                        echo "Error: " . $e->getMessage();
                       }
 
                       $pdo->close();
@@ -99,19 +99,19 @@
         </div>
       </div>
     </section>
-     
   </div>
+
   <?php include 'includes/footer.php'; ?>
   <?php include 'includes/investment_plans_modal.php'; ?>
   <?php include 'includes/investment_plans_modal2.php'; ?>
   <?php include 'includes/limits_modal.php'; ?>
-
 </div>
-<!-- ./wrapper -->
 
 <?php include 'includes/scripts.php'; ?>
+
 <script>
 $(function(){
+  // Edit Investment Plan
   $(document).on('click', '.edit', function(e){
     e.preventDefault();
     $('#edit').modal('show');
@@ -119,6 +119,7 @@ $(function(){
     getRow(id);
   });
 
+  // Delete Investment Plan
   $(document).on('click', '.delete', function(e){
     e.preventDefault();
     $('#delete').modal('show');
@@ -126,36 +127,32 @@ $(function(){
     getRow(id);
   });
 
-  $(document).on('click', '.photo', function(e){
-    e.preventDefault();
-    var id = $(this).data('id');
-    getRow(id);
-  });
-
-  $(document).on('click', '.desc', function(e){
-    e.preventDefault();
-    var id = $(this).data('id');
-    getRow(id);
-  });
-
+  // Open Limits Modal
   $(document).on('click', '.edit-limits', function(e){
     e.preventDefault();
     $('#editLimits').modal('show');
     getLimits();
   });
 
-  $('#addreview').click(function(e){
+  // Save Limits Button
+  $(document).on('click', '#saveLimits', function(e){
     e.preventDefault();
-    getCategory();
-    getBrand();
-  });
+    var form = $('#limitsForm');
 
-  $("#addnew").on("hidden.bs.modal", function () {
-      $('.append_items').remove();
-  });
-
-  $("#edit").on("hidden.bs.modal", function () {
-      $('.append_items').remove();
+    $.ajax({
+      type: 'POST',
+      url: 'limits_update.php',
+      data: form.serialize(),
+      dataType: 'json',
+      success: function(response){
+        $('#editLimits').modal('hide');
+        showToast('success', 'Limits updated successfully!');
+      },
+      error: function(xhr, status, error){
+        showToast('danger', 'Error saving limits. Please try again.');
+        console.error(xhr.responseText);
+      }
+    });
   });
 
   function getRow(id){
@@ -172,6 +169,9 @@ $(function(){
         $('#edit_rate').val(response.rate);
         $('#edit_min_invest').val(response.min_invest);
         $('#edit_max_invest').val(response.max_invest);
+      },
+      error: function(){
+        alert('Error loading plan data');
       }
     });
   }
@@ -180,45 +180,48 @@ $(function(){
     $.ajax({
       type: 'POST',
       url: 'limits_row.php',
-      data: {id: 1}, // Assuming single row with id=1
+      data: {id: 1},
       dataType: 'json',
       success: function(response){
         $('#edit_min_deposit').val(response.min_deposit);
         $('#edit_max_deposit').val(response.max_deposit);
         $('#edit_min_withdraw').val(response.min_withdraw);
         $('#edit_max_withdraw').val(response.max_withdraw);
+      },
+      error: function(){
+        showToast('danger', 'Failed to load current limits.');
       }
     });
   }
-});
-// Save Limits
-$(document).on('click', '#saveLimits', function(e){
-  e.preventDefault();
 
-  var form = $('#limitsForm');
-  $.ajax({
-    type: 'POST',
-    url: 'limits_update.php',
-    data: form.serialize(),
-    dataType: 'json',
-    success: function(response){
-      $('#editLimits').modal('hide');
-      location.reload(); // Or show success alert
-    },
-    error: function(){
-      alert('Error saving limits. Check console.');
-    }
+  // Toast Notification
+  function showToast(type, message) {
+    var toast = `
+      <div class="alert alert-${type} alert-dismissible" style="position:fixed; top:20px; right:20px; z-index:9999; min-width:300px;">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <h4><i class="icon fa fa-${type === 'success' ? 'check' : 'ban'}"></i> ${type.charAt(0).toUpperCase() + type.slice(1)}!</h4>
+        ${message}
+      </div>`;
+    $('body').append(toast);
+    setTimeout(function(){
+      $('.alert').fadeOut('slow', function(){ $(this).remove(); });
+    }, 4000);
+  }
+
+  // Cleanup modals
+  $("#addnew, #edit").on("hidden.bs.modal", function () {
+      $('.append_items').remove();
   });
 });
 </script>
+
 <style>
 .table-responsive {
   overflow-x: auto;
   width: 100%;
 }
-
 .table-responsive table {
-  min-width: 800px; /* Adjust based on your table's content width */
+  min-width: 800px;
 }
 </style>
 </body>
