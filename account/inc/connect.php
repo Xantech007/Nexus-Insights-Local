@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost"; // Correct host
-$username = "nexuymmv_db";              // Correct user
-$password = "Xander24427279";            // Correct password
-$dbname = "nexuymmv_db";        // Correct database name
+$servername = "sql204.infinityfree.com"; // Correct host
+$username = "if0_40415630";              // Correct user
+$password = "Oa8DAvaEmcByE4q";            // Correct password
+$dbname = "if0_40415630_db";        // Correct database name
 
 // Create connection
 $conne = new mysqli($servername, $username, $password, $dbname);
