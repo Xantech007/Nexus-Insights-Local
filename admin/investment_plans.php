@@ -191,6 +191,25 @@ $(function(){
     });
   }
 });
+// Save Limits
+$(document).on('click', '#saveLimits', function(e){
+  e.preventDefault();
+
+  var form = $('#limitsForm');
+  $.ajax({
+    type: 'POST',
+    url: 'limits_update.php',
+    data: form.serialize(),
+    dataType: 'json',
+    success: function(response){
+      $('#editLimits').modal('hide');
+      location.reload(); // Or show success alert
+    },
+    error: function(){
+      alert('Error saving limits. Check console.');
+    }
+  });
+});
 </script>
 <style>
 .table-responsive {
