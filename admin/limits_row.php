@@ -1,4 +1,3 @@
-<!-- limits_row.php -->
 <?php
 include 'includes/session.php';
 
@@ -7,7 +6,7 @@ if(isset($_POST['id'])){
     $conn = $pdo->open();
 
     try{
-        $stmt = $conn->prepare("SELECT * FROM deposit_withdrawal_limits WHERE id = :id");
+        $stmt = $conn->prepare("SELECT * FROM limits WHERE id = :id");
         $stmt->execute(['id' => $id]);
         $row = $stmt->fetch();
         echo json_encode($row);
