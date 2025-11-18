@@ -30,7 +30,7 @@
           <div class="col-xl-5 col-lg-8">
             <div class="hero__content">
               <h2 class="hero__title"><span class="text-white font-weight-normal">Invest for the Future in Sustainable Agriculture</span> <b class="base--color">and Harvest Consistent Returns</b></h2>
-              <p class="text-white f-size-18 mt-3">Invest with Nexus Agro, a Professional and Reliable Company. We provide you with the most necessary features that will make your experience better. Not only do we guarantee the fastest and the most exciting returns on your agricultural investments, but we also guarantee the security and sustainability of your investment.</p>
+              <p class="text-white f-size-18 mt-3">Invest with Kroger Farm, a Professional and Reliable Company. We provide you with the most necessary features that will make your experience better. Not only do we guarantee the fastest and the most exciting returns on your agricultural investments, but we also guarantee the security and sustainability of your investment.</p>
               <a href="register" class="cmn-btn text-uppercase font-weight-600 mt-4">Sign Up</a>
             </div>
           </div>
