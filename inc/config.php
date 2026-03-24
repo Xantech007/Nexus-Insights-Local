@@ -27,12 +27,12 @@ if (
 ) {
     $baseurl = 'http://localhost/';
 } else {
-    $baseurl = 'https://kroger.farm/';
+    $baseurl = 'https://nexus-insights.rf.gd';
 }
 
 //main url for SEO configurations
-$main_url = 'https://kroger.farm/';
-$sweet_url = 'kroger.farm';
+$main_url = 'https://nexus-insights.rf.gd/';
+$sweet_url = 'nexus-insights';
 
 // SMTP configuration settings
 $smtpConfig = [
@@ -42,14 +42,14 @@ $smtpConfig = [
     'password' => 'dvgeftqdwjwdolcf',       // Placeholder, replace with actual password
     'secure' => 'tls',    // From screenshot (SSL/TLS recommended)
     'fromEmail' => 'info.nexusinsights.itcom@gmail.com', // Must match username
-    'fromName' => 'Kroger Farm'             // Matches siteTitle
+    'fromName' => 'Nexus Insights'             // Matches siteTitle
 ];
 
 //main website configuration settings
 $settings = (object) array(
     'active' => 'active',
-    'siteTitle' => 'Kroger Farm',
-    'siteTitleCap' => 'KROGER FARM',
+    'siteTitle' => 'Nexus Insights',
+    'siteTitleCap' => 'NEXUS INSIGHTS',
     'siteTagline' => 'Invest With Precision',
     'phoneNumber' => 'Wa.me/+447438783028',
     'address' => '17 Willow Lane, Bristol, BS1 4XY, United Kingdom',
