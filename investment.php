@@ -71,7 +71,7 @@
               if ($investment_plan->max_invest >= 100000000) {
                   $max_invest = "Unlimited";
               } else {
-                  $max_invest = "₦". number_format($investment_plan->max_invest, 0);  // Use ₦ for Naira (Nigeria)
+                  $max_invest = "$". number_format($investment_plan->max_invest, 0);
               }
 
               $days = $investment_plan->duration;
@@ -98,7 +98,7 @@
                     <li>For <?= $duration; ?></li>
                     <li>Total <?= $total_rate; ?>% + <span class="badge base--bg text-dark">Capital</span></li>
                   </ul>
-                  <div class="package-card__range mt-5 base--color">₦<?= number_format($investment_plan->min_invest, 0); ?> - <?= $max_invest; ?></div>
+                  <div class="package-card__range mt-5 base--color">$<?= number_format($investment_plan->min_invest, 0); ?> - <?= $max_invest; ?></div>
                   <a href="account/investments" class="cmn-btn btn-md mt-4 <?= $btn_class; ?>">Invest Now</a>
                 </div><!-- package-card end -->
               </div>
