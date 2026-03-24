@@ -1,32 +1,27 @@
 <?php
-
 class Database {
- 
-	private $server = "mysql:host=sql204.infinityfree.com;dbname=if0_40415630_db";
-	private $username = "if0_40415630";
-	private $password = "Oa8DAvaEmcByE4q";
-	private $options  = array(
-		PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-		PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-	);
-	protected $conn;
- 	
-	public function open(){
- 		try {
- 			$this->conn = new PDO($this->server, $this->username, $this->password, $this->options);
- 			return $this->conn;
- 		} catch (PDOException $e) {
- 			// Log error to a file
- 			error_log("Database connection error: " . $e->getMessage() . "\n", 3, __DIR__ . "/error_log.txt");
- 			die("Database connection failed.");
- 		}
+    private $server = "mysql:host=sql104.infinityfree.com;dbname=if0_41467238_pay2;charset=utf8mb4";
+    private $username = "if0_41467238"; // Updated username
+    private $password = "i9JoIIfcAK2g"; // Updated password
+    private $options = array(
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES => false,
+    );
+    protected $conn;
+
+    public function open() {
+        try {
+            $this->conn = new PDO($this->server, $this->username, $this->password, $this->options);
+            return $this->conn;
+        } catch (PDOException $e) {
+            error_log("Database connection error: " . $e->getMessage() . "\n", 3, __DIR__ . "/error_log.txt");
+            die("Database connection failed: " . $e->getMessage());
+        }
     }
- 
-	public function close(){
-   		$this->conn = null;
- 	}
+
+    public function close() {
+        $this->conn = null;
+    }
 }
-
-$pdo = new Database();
-
 ?>
