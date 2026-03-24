@@ -1,8 +1,8 @@
 <?php
 class Database {
-    private $server = "mysql:host=sql204.infinityfree.com;dbname=if0_40415630_db;charset=utf8mb4";
-    private $username = "if0_40415630"; // Updated username
-    private $password = "Oa8DAvaEmcByE4q"; // Updated password
+    private $server = "mysql:host=sql104.infinityfree.com;dbname=if0_41467238_pay2;charset=utf8mb4";
+    private $username = "if0_41467238"; // Updated username
+    private $password = "i9JoIIfcAK2g"; // Updated password
     private $options = array(
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
