@@ -1,8 +1,8 @@
 <?php
-$servername = "sql204.infinityfree.com"; // Correct host
-$username = "if0_40415630";              // Correct user
-$password = "Oa8DAvaEmcByE4q";            // Correct password
-$dbname = "if0_40415630_db";        // Correct database name
+$servername = "sql104.infinityfree.com"; // Correct host
+$username = "if0_41467238";              // Correct user
+$password = "i9JoIIfcAK2g";            // Correct password
+$dbname = "if0_41467238_pay2";        // Correct database name
 
 // Create connection
 $conne = new mysqli($servername, $username, $password, $dbname);
