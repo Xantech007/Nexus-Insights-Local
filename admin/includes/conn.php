@@ -1,12 +1,13 @@
 <?php
 class Database {
-    private $server = "mysql:host=sql204.infinityfree.com;dbname=if0_40415630_db";
-    private $username = "if0_40415630";
-    private $password = "Oa8DAvaEmcByE4q";
-    private $options = [
+    private $server = "mysql:host=sql104.infinityfree.com;dbname=if0_41467238_pay2;charset=utf8mb4";
+    private $username = "if0_41467238"; // Updated username
+    private $password = "i9JoIIfcAK2g"; // Updated password
+    private $options = array(
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    ];
+        PDO::ATTR_EMULATE_PREPARES => false,
+    );
     protected $conn;
 
     public function open() {
@@ -14,9 +15,8 @@ class Database {
             $this->conn = new PDO($this->server, $this->username, $this->password, $this->options);
             return $this->conn;
         } catch (PDOException $e) {
-            // Log the error instead of echoing it in production
-            error_log("Connection failed: " . $e->getMessage());
-            return null; // Return null on failure to allow graceful error handling
+            error_log("Database connection error: " . $e->getMessage() . "\n", 3, __DIR__ . "/error_log.txt");
+            die("Database connection failed: " . $e->getMessage());
         }
     }
 
@@ -24,6 +24,4 @@ class Database {
         $this->conn = null;
     }
 }
-
-$pdo = new Database();
 ?>
