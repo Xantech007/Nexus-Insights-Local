@@ -6,7 +6,7 @@
     $page_name = 'Home';
     $page_parent = '';
     $page_title = 'Welcome to the Official Website of '.$settings->siteTitle;
-    $page_description = $settings->siteTitle.' provides sustainable and innovative agricultural investment opportunities backed by modern farming infrastructure. Choose a plan to get started today! What are you waiting for? Together We Grow!...';
+    $page_description = $settings->siteTitle.' provides quality infrastructure backed high-performance cloud computing services for cryptocurrency mining. Choose a plan to get started today! What are you waiting for? Together We Grow!...';
     include('inc/head.php');
 ?>
 <body>
@@ -29,8 +29,8 @@
         <div class="row">
           <div class="col-xl-5 col-lg-8">
             <div class="hero__content">
-              <h2 class="hero__title"><span class="text-white font-weight-normal">Invest for the Future in Sustainable Agriculture</span> <b class="base--color">and Harvest Consistent Returns</b></h2>
-              <p class="text-white f-size-18 mt-3">Invest with Kroger Farm, a Professional and Reliable Company. We provide you with the most necessary features that will make your experience better. Not only do we guarantee the fastest and the most exciting returns on your agricultural investments, but we also guarantee the security and sustainability of your investment.</p>
+              <h2 class="hero__title"><span class="text-white font-weight-normal">Invest for the Future on our Stable Platform</span> <b class="base--color">and Make Consistent Returns</b></h2>
+              <p class="text-white f-size-18 mt-3">Invest with Nexus Insights, a Professional and Reliable Company. We provide you with the most necessary features that will make your experience better. Not only do we guarantee the fastest and the most exciting returns on your investments, but we also guarantee the security of your investment.</p>
               <a href="register" class="cmn-btn text-uppercase font-weight-600 mt-4">Sign Up</a>
             </div>
           </div>
@@ -57,13 +57,13 @@
       $total_payout = number_format($random_number / 52000000, 1);
     ?>
 
-    <!-- stats section start -->
+    <!-- cureency section start -->
     <div class="cureency-section">
       <div class="container">
         <div class="row mb-none-30">
           <div class="col-lg-3 col-sm-6 cureency-item mb-30">
             <div class="cureency-card text-center">
-              <h6 class="cureency-card__title text-white">REGISTERED INVESTORS</h6>
+              <h6 class="cureency-card__title text-white">REGISTERED USERS</h6>
               <span class="cureency-card__amount h-font-family font-weight-600 base--color"><?= $total_accounts ?> M</span>
             </div><!-- cureency-card end -->
           </div><!-- cureency-item end -->
@@ -75,20 +75,20 @@
           </div><!-- cureency-item end -->
           <div class="col-lg-3 col-sm-6 cureency-item mb-30">
             <div class="cureency-card text-center">
-              <h6 class="cureency-card__title text-white">TOTAL RETURNS PAID</h6>
+              <h6 class="cureency-card__title text-white">TOTAL PAYOUTS</h6>
               <span class="cureency-card__amount h-font-family font-weight-600 base--color"><?= $total_payout ?> M</span>
             </div><!-- cureency-card end -->
           </div><!-- cureency-item end -->
           <div class="col-lg-3 col-sm-6 cureency-item mb-30">
             <div class="cureency-card text-center">
-              <h6 class="cureency-card__title text-white">ACTIVE INVESTORS</h6>
+              <h6 class="cureency-card__title text-white">ACTIVE MEMBERS</h6>
               <span class="cureency-card__amount h-font-family font-weight-600 base--color"><?= $active_members ?></span>
             </div><!-- cureency-card end -->
           </div><!-- cureency-item end -->
         </div>
       </div>
     </div>
-    <!-- stats section end -->
+    <!-- cureency section end -->
 
     <!-- about section start -->
     <section class="about-section pt-120 pb-120 bg_img" data-background="assets/images/bg/bg-2.jpg">
@@ -97,8 +97,8 @@
           <div class="col-lg-6 offset-lg-6">
             <div class="about-content">
               <h2 class="section-title mb-3"><span class="font-weight-normal">About</span> <b class="base--color">Us</b></h2>
-              <p>Nexus Agro is an international agricultural investment company engaged in sustainable farming, crop production, and agribusiness activities performed by qualified professional agronomists and farm managers.</p>
-              <p class="mt-4">Our goal is to provide our investors with a reliable source of high income from agriculture, while minimizing any possible risks and offering a high-quality service, allowing us to automate and simplify the relations between the investors and the farm operations. We work towards increasing your profit margin through profitable and eco-friendly agricultural investments.</p>
+              <p>Nexus Insights is an international financial company engaged in investment activities, which are related to trading on financial markets and cryptocurrency exchanges performed by qualified professional traders.</p>
+              <p class="mt-4">Our goal is to provide our investors with a reliable source of high income, while minimizing any possible risks and offering a high-quality service, allowing us to automate and simplify the relations between the investors and the trustees. We work towards increasing your profit margin by profitable investment.</p>
               <a href="about" class="cmn-btn mt-4">MORE INFO</a>
             </div><!-- about-content end -->
           </div>
@@ -113,8 +113,8 @@
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
             <div class="section-header">
-              <h2 class="section-title"><span class="font-weight-normal">Agricultural</span> <b class="base--color">Investment Plans</b></h2>
-              <p>Smart investing starts with understanding your options, choose a crop or farm strategy that aligns with your goals.</p>
+              <h2 class="section-title"><span class="font-weight-normal">Investment</span> <b class="base--color">Plans</b></h2>
+              <p>Smart investing starts with understanding your options, choose a strategy that aligns with your goals.</p>
             </div>
           </div>
         </div><!-- row end -->
@@ -126,12 +126,12 @@
               if ($index == 2 || $index == 4) {
                   $fade_in = "fadeInDown";
                   $plan_focus = "pricing-active";
-                  $icon_image = "FarmIcon5.png";
+                  $icon_image = "BitcoinIcon5.png";
                   $btn_class = "btn--white";
               }else{
                   $fade_in = "fadeInUp";
                   $plan_focus = "";
-                  $icon_image = "FarmIcon4.png";
+                  $icon_image = "BitcoinIcon4.png";
                   $btn_class = "btn--secondary";
               }
 
@@ -183,8 +183,8 @@
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
             <div class="section-header">
-              <h2 class="section-title"><span class="font-weight-normal">Why Choose</span> <b class="base--color">Nexus Agro</b></h2>
-              <p>Our goal is to provide our investors with a reliable source of high income from sustainable agriculture, while minimizing any possible risks and offering a high-quality service.</p>
+              <h2 class="section-title"><span class="font-weight-normal">Why Choose</span> <b class="base--color">Nexus Insights</b></h2>
+              <p>Our goal is to provide our investors with a reliable source of high income, while minimizing any possible risks and offering a high-quality service.</p>
             </div>
           </div>
         </div><!-- row end -->
@@ -197,7 +197,7 @@
                 </div>
                 <h4 class="choose-card__title base--color">Legal Company</h4>
               </div>
-              <p>Our company operates within the legal framework, offering legitimate agricultural investment services with proper certification. We prioritize transparency, sustainability, and compliance, ensuring a safe experience for our clients.</p>
+              <p>Our company operates within the legal framework, offering legitimate investment services with proper certification. We prioritize transparency, security, and compliance, ensuring a safe experience for our clients.</p>
             </div><!-- choose-card end -->
           </div>
           <div class="col-xl-4 col-md-6 mb-30">
@@ -206,9 +206,9 @@
                 <div class="choose-card__icon">
                   <i class="las la-lock"></i>
                 </div>
-                <h4 class="choose-card__title base--color">High Reliability</h4>
+                <h4 class="choose-card__title base--color">High reliability</h4>
               </div>
-              <p>We are trusted by a huge number of people. We are working hard constantly to improve the level of our farm security and minimize possible risks.</p>
+              <p>We are trusted by a huge number of people. We are working hard constantly to improve the level of our security system and minimize possible risks.</p>
             </div><!-- choose-card end -->
           </div>
           <div class="col-xl-4 col-md-6 mb-30">
@@ -217,9 +217,9 @@
                 <div class="choose-card__icon">
                   <i class="las la-user-lock"></i>
                 </div>
-                <h4 class="choose-card__title base--color">Privacy & Security</h4>
+                <h4 class="choose-card__title base--color">Anonymity</h4>
               </div>
-              <p>We ensure investor privacy and use secure payment systems. In the era of digital finance – this is one of the most convenient ways of cooperation.</p>
+              <p>Anonymity and using cryptocurrency as a payment instrument. In the era of electronic money – this is one of the most convenient ways of cooperation.</p>
             </div><!-- choose-card end -->
           </div>
           <div class="col-xl-4 col-md-6 mb-30">
@@ -228,9 +228,9 @@
                 <div class="choose-card__icon">
                   <i class="las la-shipping-fast"></i>
                 </div>
-                <h4 class="choose-card__title base--color">Quick Payouts</h4>
+                <h4 class="choose-card__title base--color">Quick Withdrawal</h4>
               </div>
-              <p>All payout requests are processed instantly once harvest or cycle is complete. There are high maximum limits. The minimum payout amount is only $100.</p>
+              <p>Our all requests are treated spontaneously once requested. There are high maximum limits. The minimum withdrawal amount is only $100.</p>
             </div><!-- choose-card end -->
           </div>
           <div class="col-xl-4 col-md-6 mb-30">
@@ -241,7 +241,7 @@
                 </div>
                 <h4 class="choose-card__title base--color">Referral Program</h4>
               </div>
-              <p>We are offering a certain level of referral income through our referral program. You can increase your income by simply referring a few people.</p>
+              <p>We are offering a certain level of referral income through our referral program. you can increase your income by simply refering a few people.</p>
             </div><!-- choose-card end -->
           </div>
           <div class="col-xl-4 col-md-6 mb-30">
@@ -252,7 +252,7 @@
                 </div>
                 <h4 class="choose-card__title base--color">24/7 Support</h4>
               </div>
-              <p>We provide 24/7 customer support through e-mail and live chat. Our support representatives are periodically available to resolve any difficulty.</p>
+              <p>We provide 24/7 customer support through e-mail and livechat. Our support representatives are periodically available to elucidate any difficulty..</p>
             </div><!-- choose-card end -->
           </div>
           <div class="col-xl-4 col-md-6 mb-30">
@@ -299,8 +299,8 @@
         <div class="row justify-content-center">
           <div class="col-lg-6">
             <div class="section-header text-center">
-              <h2 class="section-title"><span class="font-weight-normal">Harvest</span> <b class="base--color">Calculator</b></h2>
-              <p>You must know the calculation before investing in any farm plan, so you never make mistakes. Check the calculation and you will get as our calculator says.</p>
+              <h2 class="section-title"><span class="font-weight-normal">Profit</span> <b class="base--color">Calculator</b></h2>
+              <p>You must know the calculation before investing in any plan, so you never make mistakes. Check the calculation and you will get as our calculator says.</p>
             </div>
           </div>
         </div>
@@ -330,9 +330,9 @@
                     <input type="number" data-bind="in:value, f: float" data-name="duration" id="invest_duration" placeholder="0.00" class="form-control base--bg">
                   </div>
                   <div class="col-lg-6 mb-30">
-                    <label>Expected Harvest</label>
+                    <label>Profit Amount</label>
                     <span data-bind="out:price, f:currency" data-name="profit" class="form-control base--bg">
-                        <span class="pr-sign">- </span> $<span class="pr-wrap" style="display: none;"><span class="pr">0</span></span>
+                        <span class="pr-sign">- </span> $<span class="pr-wrap" style="display: none;"><span class="pr">0</span></span>
                     </span>
                   </div>
                 </div>
@@ -350,7 +350,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
             <div class="section-header">
-              <h2 class="section-title"><span class="font-weight-normal">How</span> <b class="base--color">Nexus Agro</b> <span class="font-weight-normal">Works</span></h2>
+              <h2 class="section-title"><span class="font-weight-normal">How</span> <b class="base--color">Nexus Insights</b> <span class="font-weight-normal">Works</span></h2>
             </div>
           </div>
         </div><!-- row end -->
@@ -369,11 +369,11 @@
           <div class="col-lg-4 col-md-6 work-item mb-30">
             <div class="work-card text-center">
               <div class="work-card__icon">
-                <i class="las la-seedling base--color"></i>
+                <i class="las la-hand-holding-usd base--color"></i>
                 <span class="step-number">02</span>
               </div>
               <div class="work-card__content">
-                <h4 class="base--color mb-3">Invest in Farm Plan</h4>
+                <h4 class="base--color mb-3">Invest To Plan</h4>
               </div>
             </div><!-- work-card end -->
           </div>
@@ -384,7 +384,7 @@
                 <span class="step-number">03</span>
               </div>
               <div class="work-card__content">
-                <h4 class="base--color mb-3">Harvest Profit</h4>
+                <h4 class="base--color mb-3">Get Profit</h4>
               </div>
             </div><!-- work-card end -->
           </div>
@@ -400,7 +400,7 @@
           <div class="col-lg-6 text-center">
             <div class="section-header">
               <h2 class="section-title"><span class="font-weight-normal">Frequently Asked</span> <b class="base--color">Questions</b></h2>
-              <p>We answer some of your Frequently Asked Questions regarding our agricultural investment platform. If you have a query that is not answered here, Please contact us.</p>
+              <p>We answer some of your Frequently Asked Questions regarding our platform. If you have a query that is not answered here, Please contact us.</p>
             </div>
           </div>
         </div><!-- row end -->
@@ -412,13 +412,13 @@
                   <h2 class="mb-0">
                     <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       <i class="las la-question-circle"></i>
-                      <span>When can I deposit/withdraw from my investment account?</span>
+                      <span>When can I deposit/withdraw from my Investment account?</span>
                     </button>
                   </h2>
                 </div>
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                   <div class="card-body">
-                    Deposit and withdrawal are available at any time. Be sure your funds are not allocated to an active farm cycle before withdrawal. The available amount is shown in your dashboard on the main page of the investment platform. 
+                    Deposit and withdrawal are available for at any time. Be sure, that your funds are not used in any ongoing trade before the withdrawal. The available amount is shown in your dashboard on the main page of Investing platform. 
                   </div>
                 </div>
               </div>
@@ -478,7 +478,7 @@
                 </div>
                 <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                   <div class="card-body">
-                    You can withdraw the full amount of your account balance minus the funds that are currently invested in active farm cycles.
+                    You can withdraw the full amount of your account balance minus the funds that are used currently for supporting opened positions.
                   </div>
                 </div>
               </div>
@@ -495,7 +495,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
             <div class="section-header">
-              <h2 class="section-title"><span class="font-weight-normal">What Farmers & Investors Say</span> <b class="base--color">About Us</b></h2>
+              <h2 class="section-title"><span class="font-weight-normal">What People Say</span> <b class="base--color">About Us</b></h2>
             </div>
           </div>
         </div><!-- row end -->
@@ -505,7 +505,7 @@
               <div class="single-slide">
                 <div class="testimonial-card">
                   <div class="testimonial-card__content">
-                    <p>I was skeptical at first but their consistent harvest payouts changed my mindset completely.</p>
+                    <p>I was scared at first but their swift payment system changed my mindset</p>
                   </div>
                   <div class="testimonial-card__client">
                     <div class="thumb">
@@ -513,7 +513,7 @@
                     </div>
                     <div class="content">
                       <h6 class="name">Henry Taverner</h6>
-                      <span class="designation">AGRI INVESTOR</span>
+                      <span class="designation">VIP INVESTOR</span>
                       <div class="ratings">
                         <i class="las la-star"></i>
                         <i class="las la-star"></i>
@@ -528,7 +528,7 @@
               <div class="single-slide">
                 <div class="testimonial-card">
                   <div class="testimonial-card__content">
-                    <p>First of all, I want to say thank you for the opportunity to earn from farming! I like the company. Invested in a 1000-acre plan. Profitable cycles and a great referral program. You can make good money.</p>
+                    <p>First of all, I want to say thank you for the opportunity to earn !! I like the company. Opened a deposit of 1000. Profitable marketing and a pleasant referral program. You can make good money.</p>
                   </div>
                   <div class="testimonial-card__client">
                     <div class="thumb">
@@ -536,7 +536,7 @@
                     </div>
                     <div class="content">
                       <h6 class="name">Ashton Cambage</h6>
-                      <span class="designation">AGRI INVESTOR</span>
+                      <span class="designation">VIP INVESTOR</span>
                       <div class="ratings">
                         <i class="las la-star"></i>
                         <i class="las la-star"></i>
@@ -551,7 +551,7 @@
               <div class="single-slide">
                 <div class="testimonial-card">
                   <div class="testimonial-card__content">
-                    <p>The best agricultural investment I can recommend to anyone who wants to grow wealth sustainably.</p>
+                    <p>The best investment that i can recommend to anyone that want to trade and get back profit.</p>
                   </div>
                   <div class="testimonial-card__client">
                     <div class="thumb">
@@ -559,7 +559,7 @@
                     </div>
                     <div class="content">
                       <h6 class="name">Jasper Kossak</h6>
-                      <span class="designation">AGRI INVESTOR</span>
+                      <span class="designation">VIP INVESTOR</span>
                       <div class="ratings">
                         <i class="las la-star"></i>
                         <i class="las la-star"></i>
@@ -574,7 +574,7 @@
               <div class="single-slide">
                 <div class="testimonial-card">
                   <div class="testimonial-card__content">
-                    <p>At first I was skeptical, I decided to start with the starter farm plan. I've never looked back since then. It is a great long-term growth plan for me.</p>
+                    <p>At first I was skeptical, I decided to start with the starter plan. I've never looked back since then. It is a great retirement plan for me</p>
                   </div>
                   <div class="testimonial-card__client">
                     <div class="thumb">
@@ -582,7 +582,7 @@
                     </div>
                     <div class="content">
                       <h6 class="name">Zohir Khan</h6>
-                      <span class="designation">AGRI INVESTOR</span>
+                      <span class="designation">VIP INVESTOR</span>
                       <div class="ratings">
                         <i class="las la-star"></i>
                         <i class="las la-star"></i>
@@ -611,8 +611,8 @@
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
             <div class="section-header">
-              <h2 class="section-title"><span class="font-weight-normal">Our Latest</span> <b class="base--color">Transactions</b></h2>
-              <p>Here is the log of the most recent investment and payout transactions made by our users.</p>
+              <h2 class="section-title"><span class="font-weight-normal">Our Latest</span> <b class="base--color">Transaction</b></h2>
+              <p>Here is the log of the most recent transactions including withdraw and deposit made by our users.</p>
             </div>
           </div>
         </div><!-- row end -->
@@ -620,10 +620,10 @@
           <div class="col-lg-10">
             <ul class="nav nav-tabs custom--style-two justify-content-center" id="transactionTab" role="tablist">
               <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="deposit-tab" data-toggle="tab" href="#deposit" role="tab" aria-controls="deposit" aria-selected="true">Latest Investment</a>
+                <a class="nav-link active" id="deposit-tab" data-toggle="tab" href="#deposit" role="tab" aria-controls="deposit" aria-selected="true">Latest Deposit</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a class="nav-link" id="withdraw-tab" data-toggle="tab" href="#withdraw" role="tab" aria-controls="withdraw" aria-selected="false">Latest Payout</a>
+                <a class="nav-link" id="withdraw-tab" data-toggle="tab" href="#withdraw" role="tab" aria-controls="withdraw" aria-selected="false">Latest Withdraw</a>
               </li>
             </ul>
             <div class="tab-content mt-4" id="transactionTabContent">
@@ -726,13 +726,11 @@
         <div class="row justify-content-center">
           <div class="col-xl-6 col-lg-8 text-center">
             <div class="section-header">
-              <h2 class="section-title"><span class="font-weight-normal">Our Top</span> <b class="base--color">Agri-Investors</b></h2>
+              <h2 class="section-title"><span class="font-weight-normal">Our Top</span> <b class="base--color">Investor</b></h2>
             </div>
           </div>
         </div><!-- row end -->
         <div class="row justify-content-center mb-none-30">
-          <!-- (Existing investor cards remain unchanged in structure, but update titles if needed) -->
-          <!-- Example: Change "Investment" to "Farm Investment" -->
           <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
             <div class="investor-card border-radius--5">
               <div class="investor-card__thumb">
@@ -740,12 +738,87 @@
               </div>
               <div class="investor-card__content">
                 <h6 class="name">Abd Manaf Abbad</h6>
-                <span class="amount f-size-14">Farm Investment - $3,500,000</span>
+                <span class="amount f-size-14">Investment - $3,500,000</span>
               </div>
             </div><!-- investor-card end -->
           </div>
-          <!-- Repeat for others with "Farm Investment" -->
-          <!-- ... (rest unchanged for brevity) ... -->
+          <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
+            <div class="investor-card border-radius--5">
+              <div class="investor-card__thumb">
+                <img src="assets/images/investor/12.jpg" alt="Investor Francisco João" class="img-fluid">
+              </div>
+              <div class="investor-card__content">
+                <h6 class="name">Francisco João</h6>
+                <span class="amount f-size-14">Investment - $3,300,400</span>
+              </div>
+            </div><!-- investor-card end -->
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
+            <div class="investor-card border-radius--5">
+              <div class="investor-card__thumb">
+                <img src="assets/images/investor/13.jpg" alt="Investor Wang Li Zhang" class="img-fluid">
+              </div>
+              <div class="investor-card__content">
+                <h6 class="name">Wang Li Zhang</h6>
+                <span class="amount f-size-14">Investment - $3,000,000</span>
+              </div>
+            </div><!-- investor-card end -->
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
+            <div class="investor-card border-radius--5">
+              <div class="investor-card__thumb">
+                <img src="assets/images/investor/14.jpg" alt="Investor Jack Noah" class="img-fluid">
+              </div>
+              <div class="investor-card__content">
+                <h6 class="name">Jack Noah</h6>
+                <span class="amount f-size-14">Investment - $2,800,600</span>
+              </div>
+            </div><!-- investor-card end -->
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
+            <div class="investor-card border-radius--5">
+              <div class="investor-card__thumb">
+                <img src="assets/images/investor/15.jpg" alt="Investor Mary Robert" class="img-fluid">
+              </div>
+              <div class="investor-card__content">
+                <h6 class="name">Mary Robert</h6>
+                <span class="amount f-size-14">Investment - $1,500,000</span>
+              </div>
+            </div><!-- investor-card end -->
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
+            <div class="investor-card border-radius--5">
+              <div class="investor-card__thumb">
+                <img src="assets/images/investor/16.jpg" alt="Investor Oliver Ethan" class="img-fluid">
+              </div>
+              <div class="investor-card__content">
+                <h6 class="name">Oliver Ethan</h6>
+                <span class="amount f-size-14">Investment - $500,000</span>
+              </div>
+            </div><!-- investor-card end -->
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
+            <div class="investor-card border-radius--5">
+              <div class="investor-card__thumb">
+                <img src="assets/images/investor/17.jpg" alt="Investor Zhang Liu Chen" class="img-fluid">
+              </div>
+              <div class="investor-card__content">
+                <h6 class="name">Zhang Liu Chen</h6>
+                <span class="amount f-size-14">Investment - $1,700,450</span>
+              </div>
+            </div><!-- investor-card end -->
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
+            <div class="investor-card border-radius--5">
+              <div class="investor-card__thumb">
+                <img src="assets/images/investor/18.jpg" alt="Investor Yang Huang" class="img-fluid">
+              </div>
+              <div class="investor-card__content">
+                <h6 class="name">Yang Huang</h6>
+                <span class="amount f-size-14">Investment - $850,350</span>
+              </div>
+            </div><!-- investor-card end -->
+          </div>
         </div>
       </div>
     </section>
@@ -758,7 +831,7 @@
           <div class="col-xl-8">
             <div class="cta-wrapper bg_img border-radius--10 text-center" data-background="assets/images/bg/bg-8.jpg">
               <h2 class="title mb-3">Get Started Today With Us</h2>
-              <p>This is a Revolutionary Agricultural Investment Platform! Invest for Future in Sustainable Farming and Harvest Fast Returns. Not only we guarantee the most exciting yields on your investments, but we also guarantee the security and sustainability of your investment.</p>
+              <p>This is a Revolutionary Money Making Platform! Invest for Future in Stable Platform and Make Fast Money. Not only we guarantee the fastest and the most exciting returns on your investments, but we also guarantee the security of your investment.</p>
               <a href="register" class="cmn-btn mt-4">Join Us</a>
             </div>
           </div>
@@ -774,20 +847,38 @@
           <div class="col-lg-6 text-center">
             <div class="section-header">
               <h2 class="section-title"><span class="font-weight-normal">Payment We</span> <b class="base--color">Accept</b></h2>
-              <p>We support multiple secure payment methods for seamless deposits and withdrawals.</p>
+              <p>We support multiple major cryptocurrencies for seamless deposits and withdrawals.</p>
             </div>
           </div>
         </div><!-- row end -->
         <div class="row">
           <div class="col-lg-12">
             <div class="payment-slider">
-              <!-- (Keep existing payment icons or update to relevant ones) -->
               <div class="single-slide">
                 <div class="brand-item">
                   <img src="assets/images/brand/1.png" alt="image">
                 </div><!-- brand-item end -->
               </div>
-              <!-- ... -->
+              <div class="single-slide">
+                <div class="brand-item">
+                  <img src="assets/images/brand/2.png" alt="image">
+                </div><!-- brand-item end -->
+              </div>
+              <div class="single-slide">
+                <div class="brand-item">
+                  <img src="assets/images/brand/3.png" alt="image">
+                </div><!-- brand-item end -->
+              </div>
+              <div class="single-slide">
+                <div class="brand-item">
+                  <img src="assets/images/brand/4.png" alt="image">
+                </div><!-- brand-item end -->
+              </div>
+              <div class="single-slide">
+                <div class="brand-item">
+                  <img src="assets/images/brand/5.png" alt="image">
+                </div><!-- brand-item end -->
+              </div>
             </div><!-- payment-slider end -->
           </div>
         </div>
@@ -802,7 +893,7 @@
           <div class="col-lg-6 text-center">
             <div class="section-header">
               <h2 class="section-title"><span class="font-weight-normal">Our Latest</span> <b class="base--color">News</b></h2>
-              <p>Follow our latest news and insights which focus exclusively on sustainable agriculture, crop yields, farm tech, and investment strategies.</p>
+              <p>Follow our latest news and thoughts which focuses exclusively on investment strategy guide, blockchain tech, crypto-trading and mining.</p>
             </div>
           </div>
         </div><!-- row end -->
@@ -811,14 +902,14 @@
             $index = 1;
               foreach ($news as $new) : 
                 if ($index == 1) {
-                  $tag1 = "Agri News";
-                  $tag2 = "Farming";
+                  $tag1 = "Crypto News";
+                  $tag2 = "Apps";
                 }elseif ($index == 2) {
-                  $tag1 = "Sustainable";
+                  $tag1 = "Cryptocurrency";
                   $tag2 = "Tech";
                 }elseif ($index == 3) {
-                  $tag1 = "Crop Yield";
-                  $tag2 = "Investment";
+                  $tag1 = "Bitcoin";
+                  $tag2 = "Tech";
                 }
           ?>
                 <div class="col-lg-4 col-md-6 mb-30">
