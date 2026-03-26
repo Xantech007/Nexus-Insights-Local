@@ -835,33 +835,7 @@
       </div>
     </section>
     <!-- payment brand section end -->
-    <!-- payment brand section start -->
-    <section class="pb-120">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 text-center">
-            <div class="section-header">
-              <h2 class="section-title"><span class="font-weight-normal">Payment Methods We</span> <b class="base--color">Accept</b></h2>
-              <p>We support secure and convenient payment options for your investments in medical equipment contracts.</p>
-            </div>
-          </div>
-        </div><!-- row end -->
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="payment-slider">
-              <!-- Existing payment logos retained -->
-              <div class="single-slide">
-                <div class="brand-item">
-                  <img src="assets/images/brand/1.png" alt="image">
-                </div><!-- brand-item end -->
-              </div>
-              <!-- ... keep all existing brand items ... -->
-            </div><!-- payment-slider end -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- payment brand section end -->
+
     <!-- blog section start -->
     <section class="pt-120 pb-120 border-top-1">
       <div class="container">
