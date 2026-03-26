@@ -143,7 +143,7 @@
 
               $days = $investment_plan->duration;
 
-              $total_rate = number_format($investment_plan->rate * $investment_plan->duration, 0);
+              $total_rate = number_format($investment_plan->rate, 0);
 
               if ($investment_plan->duration <= 4) {
                   $duration = $days * 24 ." Hours";
