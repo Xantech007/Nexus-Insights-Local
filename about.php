@@ -1,35 +1,26 @@
 <?php
     include('init.php');
     include('admin/includes/format.php');
-
     $page_name = 'About Us';
     $page_parent = '';
-    $page_title = 'Welcome to the Official Website of '.$settings->siteTitle;
-    $page_description = $settings->siteTitle.' provides quality infrastructure backed high-performance cloud computing services for cryptocurrency mining. Choose a plan to get started today! What are you waiting for? Together We Grow!...';
+    $page_title = 'About Us - '.$settings->siteTitle;
+    $page_description = $settings->siteTitle.' helps investors fund medical equipment supply contracts to hospitals. Your investment enables contractors to deliver life-saving healthcare equipment. At the end of the contract, contractors repay the loan with interest, which becomes your profit. Invest with us to save lives and generate income!';
     include('inc/head.php');
-
-
-   
-
 ?>
 <body>
   <!--========== Preloader ==========-->
-  
   <!--========== Preloader ==========-->
-
   <!-- scroll-to-top start -->
-  <?php include('inc/scroll-to-top.php'); ?>  
+  <?php include('inc/scroll-to-top.php'); ?>
   <!-- scroll-to-top end -->
-
   <!-- STAR ANIMATION -->
   <?php include('inc/star-animation.php'); ?>
   <!-- / STAR ANIMATION -->
-
   <div class="page-wrapper">
-    <!-- header-section start  -->
-    <?php include('inc/header.php'); ?>    
-    <!-- header-section end  -->
-    
+    <!-- header-section start -->
+    <?php include('inc/header.php'); ?>
+    <!-- header-section end -->
+   
     <!-- inner hero start -->
     <section class="inner-hero bg_img" data-background="assets/images/bg/bg-1.jpg">
       <div class="container">
@@ -46,15 +37,14 @@
     </section>
     <!-- inner hero end -->
 
-
     <!-- how work section start -->
     <section class="pt-120 pb-120 bg_img" data-background="assets/images/bg/bg-5.jpg">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
             <div class="section-header">
-              <h2 class="section-title"><span class="font-weight-normal">How</span> <b class="base--color">Nexus Insights</b> <span class="font-weight-normal">Works</span></h2>
-              <p>Get involved in our tremendous platform and Invest. Get profit in your wallet automatically.</p>
+              <h2 class="section-title"><span class="font-weight-normal">How</span> <b class="base--color">Our Platform</b> <span class="font-weight-normal">Works</span></h2>
+              <p>Invest in medical equipment supply contracts and earn attractive returns while helping save lives.</p>
             </div>
           </div>
         </div><!-- row end -->
@@ -67,6 +57,7 @@
               </div>
               <div class="work-card__content">
                 <h4 class="base--color mb-3">Create Account</h4>
+                <p class="mt-2">Sign up and become part of our investor community.</p>
               </div>
             </div><!-- work-card end -->
           </div>
@@ -77,7 +68,8 @@
                 <span class="step-number">02</span>
               </div>
               <div class="work-card__content">
-                <h4 class="base--color mb-3">Invest To Plan</h4>
+                <h4 class="base--color mb-3">Fund a Contract</h4>
+                <p class="mt-2">Choose an investment plan and provide capital to support hospital medical equipment supply.</p>
               </div>
             </div><!-- work-card end -->
           </div>
@@ -88,15 +80,15 @@
                 <span class="step-number">03</span>
               </div>
               <div class="work-card__content">
-                <h4 class="base--color mb-3">Get Profit</h4>
+                <h4 class="base--color mb-3">Receive Repayment + Profit</h4>
+                <p class="mt-2">When the contractor completes delivery, they repay the loan with interest. You get your capital back plus profit.</p>
               </div>
             </div><!-- work-card end -->
           </div>
         </div>
       </div>
     </section>
-    <!-- how work section end  -->
-
+    <!-- how work section end -->
 
     <!-- about section start -->
     <section class="about-section pt-120 pb-120 bg_img" data-background="assets/images/bg/bg-2.jpg">
@@ -105,9 +97,16 @@
           <div class="col-lg-6 offset-lg-6">
             <div class="about-content">
               <h2 class="section-title mb-3"><span class="font-weight-normal">About</span> <b class="base--color">Us</b></h2>
-              Nexus Insights is an international financial company engaged in investment activities, which are related to trading on financial markets and cryptocurrency exchanges performed by qualified professional traders.</p>
-              <p class="mt-4">Our goal is to provide our investors with a reliable source of high income, while minimizing any possible risks and offering a high-quality service, allowing us to automate and simplify the relations between the investors and the trustees. We work towards increasing your profit margin by profitable investment.</p>
-              <p class="mt-4">We are a lifetime partner committed to helping our investors enhance the market exchange and increase the value of their capital. A wellspring of trustworthy information, our breadth of experience has fueled our reputation as a financial trading firm.</p>
+              
+              <p>We are a specialized investment platform that connects ethical investors with real medical equipment supply contracts awarded to contractors for hospitals.</p>
+              
+              <p class="mt-4">The money you invest goes directly to qualified contractors who have secured contracts to supply essential healthcare equipment to hospitals. This financial facilitation enables them to successfully procure, deliver, and install life-saving medical devices and equipment.</p>
+              
+              <p class="mt-4">At the end of the contract period, the contractors repay the full loan amount together with interest. This interest serves as the profit distributed to our investors. Our model creates a powerful win-win situation: investors earn competitive returns while contributing to improved healthcare infrastructure that saves lives.</p>
+              
+              <p class="mt-4">We are committed to transparency, due diligence, and creating sustainable impact. Every investment on our platform supports the delivery of critical medical equipment to hospitals, helping bridge healthcare gaps while generating reliable income for our investors.</p>
+              
+              <p class="mt-4"><strong>Invest with us to save lives and make profits.</strong></p>
             </div><!-- about-content end -->
           </div>
         </div>
@@ -118,13 +117,12 @@
     <!-- team section start -->
     <?php include('inc/team.php') ?>
     <!-- team section end -->
-    
+   
     <!-- footer section start -->
     <?php include('inc/footer.php') ?>
     <!-- footer section end -->
   </div> <!-- page-wrapper end -->
+  
   <?php include('inc/scripts.php') ?>
-  </body>
-
-<!-- Mirrored from template.viserlab.com/hyiplab/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Oct 2021 16:37:40 GMT -->
+</body>
 </html>
