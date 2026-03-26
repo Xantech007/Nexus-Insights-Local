@@ -157,7 +157,7 @@ if (isset($_SESSION['user'])) {
     $current_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     if ($current_page !== 'livechat.php' && !str_ends_with($current_path, '/accounts/livechat.php')) {
     ?>
-        <a href="livechat.php" class="livechat-button">
+        <a href="/livechat.php" class="livechat-button">
             <span class="help-text">Need help?</span>
             <i class="fas fa-headset"></i>
         </a>
