@@ -32,7 +32,7 @@ if (
 
 //main url for SEO configurations
 $main_url = 'https://nexus-insights.rf.gd/';
-$sweet_url = 'nexus-insights';
+$sweet_url = 'nexus-insights.rf.gd';
 
 // SMTP configuration settings
 $smtpConfig = [
