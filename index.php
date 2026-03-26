@@ -691,12 +691,11 @@
         <div class="row justify-content-center">
           <div class="col-xl-6 col-lg-8 text-center">
             <div class="section-header">
-              <h2 class="section-title"><span class="font-weight-normal">Our Top</span> <b class="base--color">Investors</b></h2>
+              <h2 class="section-title"><span class="font-weight-normal">Our Top</span> <b class="base--color">Investor</b></h2>
             </div>
           </div>
         </div><!-- row end -->
         <div class="row justify-content-center mb-none-30">
-          <!-- Keep existing top investors or update names if desired. For now, retaining structure as per instruction not to shorten -->
           <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
             <div class="investor-card border-radius--5">
               <div class="investor-card__thumb">
@@ -708,27 +707,134 @@
               </div>
             </div><!-- investor-card end -->
           </div>
-          <!-- ... (remaining top investor cards kept unchanged to avoid shortening the file) ... -->
-          <!-- Note: In a full update, you would keep all 8 cards as in original -->
-        </div>
-      </div>
-    </section>
-    <!-- top investor section end -->
-    <!-- cta section start -->
-    <section class="pb-120">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-xl-8">
-            <div class="cta-wrapper bg_img border-radius--10 text-center" data-background="assets/images/bg/bg-8.jpg">
-              <h2 class="title mb-3">Start Investing Today</h2>
-              <p>Help deliver life-saving medical equipment to hospitals while earning competitive returns. Your investment makes a real difference in healthcare and generates income for you.</p>
-              <a href="register" class="cmn-btn mt-4">Join Us Now</a>
-            </div>
+          <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
+            <div class="investor-card border-radius--5">
+              <div class="investor-card__thumb">
+                <img src="assets/images/investor/12.jpg" alt="Investor Francisco João" class="img-fluid">
+              </div>
+              <div class="investor-card__content">
+                <h6 class="name">Francisco João</h6>
+                <span class="amount f-size-14">Investment - $3,300,400</span>
+              </div>
+            </div><!-- investor-card end -->
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
+            <div class="investor-card border-radius--5">
+              <div class="investor-card__thumb">
+                <img src="assets/images/investor/13.jpg" alt="Investor Wang Li Zhang" class="img-fluid">
+              </div>
+              <div class="investor-card__content">
+                <h6 class="name">Wang Li Zhang</h6>
+                <span class="amount f-size-14">Investment - $3,000,000</span>
+              </div>
+            </div><!-- investor-card end -->
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
+            <div class="investor-card border-radius--5">
+              <div class="investor-card__thumb">
+                <img src="assets/images/investor/14.jpg" alt="Investor Jack Noah" class="img-fluid">
+              </div>
+              <div class="investor-card__content">
+                <h6 class="name">Jack Noah</h6>
+                <span class="amount f-size-14">Investment - $2,800,600</span>
+              </div>
+            </div><!-- investor-card end -->
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
+            <div class="investor-card border-radius--5">
+              <div class="investor-card__thumb">
+                <img src="assets/images/investor/15.jpg" alt="Investor Mary Robert" class="img-fluid">
+              </div>
+              <div class="investor-card__content">
+                <h6 class="name">Mary Robert</h6>
+                <span class="amount f-size-14">Investment - $1,500,000</span>
+              </div>
+            </div><!-- investor-card end -->
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
+            <div class="investor-card border-radius--5">
+              <div class="investor-card__thumb">
+                <img src="assets/images/investor/16.jpg" alt="Investor Oliver Ethan" class="img-fluid">
+              </div>
+              <div class="investor-card__content">
+                <h6 class="name">Oliver Ethan</h6>
+                <span class="amount f-size-14">Investment - $500,000</span>
+              </div>
+            </div><!-- investor-card end -->
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
+            <div class="investor-card border-radius--5">
+              <div class="investor-card__thumb">
+                <img src="assets/images/investor/17.jpg" alt="Investor Zhang Liu Chen" class="img-fluid">
+              </div>
+              <div class="investor-card__content">
+                <h6 class="name">Zhang Liu Chen</h6>
+                <span class="amount f-size-14">Investment - $1,700,450</span>
+              </div>
+            </div><!-- investor-card end -->
+          </div>
+          <div class="col-xl-3 col-lg-4 col-sm-6 mb-30">
+            <div class="investor-card border-radius--5">
+              <div class="investor-card__thumb">
+                <img src="assets/images/investor/18.jpg" alt="Investor Yang Huang" class="img-fluid">
+              </div>
+              <div class="investor-card__content">
+                <h6 class="name">Yang Huang</h6>
+                <span class="amount f-size-14">Investment - $850,350</span>
+              </div>
+            </div><!-- investor-card end -->
           </div>
         </div>
       </div>
     </section>
-    <!-- cta section end -->
+    <!-- top investor section end -->
+
+      
+    <!-- payment brand section start -->
+    <section class="pb-120">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <div class="section-header">
+              <h2 class="section-title"><span class="font-weight-normal">Payment We</span> <b class="base--color">Accept</b></h2>
+              <p>We support multiple major cryptocurrencies for seamless deposits and withdrawals.</p>
+            </div>
+          </div>
+        </div><!-- row end -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="payment-slider">
+              <div class="single-slide">
+                <div class="brand-item">
+                  <img src="assets/images/brand/1.png" alt="image">
+                </div><!-- brand-item end -->
+              </div>
+              <div class="single-slide">
+                <div class="brand-item">
+                  <img src="assets/images/brand/2.png" alt="image">
+                </div><!-- brand-item end -->
+              </div>
+              <div class="single-slide">
+                <div class="brand-item">
+                  <img src="assets/images/brand/3.png" alt="image">
+                </div><!-- brand-item end -->
+              </div>
+              <div class="single-slide">
+                <div class="brand-item">
+                  <img src="assets/images/brand/4.png" alt="image">
+                </div><!-- brand-item end -->
+              </div>
+              <div class="single-slide">
+                <div class="brand-item">
+                  <img src="assets/images/brand/5.png" alt="image">
+                </div><!-- brand-item end -->
+              </div>
+            </div><!-- payment-slider end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- payment brand section end -->
     <!-- payment brand section start -->
     <section class="pb-120">
       <div class="container">
