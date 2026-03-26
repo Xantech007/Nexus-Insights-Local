@@ -99,7 +99,7 @@
                   <h4 class="package-card__title base--color mb-2"><?= $investment_plan->name; ?></h4>
                   <ul class="package-card__features mt-4">
                     <li>Return <?= $investment_plan->rate; ?>%</li>
-                    <li>Daily</li>
+                    <li>Monthly</li>
                     <li>For <?= $duration; ?></li>
                     <li>Total <?= $total_rate; ?>% + <span class="badge base--bg text-dark">Capital</span></li>
                   </ul>
