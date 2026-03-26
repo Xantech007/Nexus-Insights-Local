@@ -1,33 +1,27 @@
 <?php
     include('init.php');
-
     if(isset($_SESSION['user'])){
         header('location: account/dashboard.php');
     }
-
     $page_name = 'Sign In';
     $page_parent = 'Account';
-    $page_title = 'Welcome to the Official Website of '.$settings->siteTitle;
-    $page_description = $settings->siteTitle.' provides quality infrastructure backed high-performance cloud computing services for cryptocurrency mining. Choose a plan to get started today! What are you waiting for? Together We Grow!...';
+    $page_title = 'Login - '.$settings->siteTitle;
+    $page_description = $settings->siteTitle . ' - Login to your account to invest in medical equipment supply contracts for hospitals. Start funding life-saving healthcare equipment and earn attractive profits.';
     include('inc/head.php');
 ?>
 <body>
     <!--========== Preloader ==========-->
-    
     <!--========== Preloader ==========-->
-
     <!-- scroll-to-top start -->
-    <?php include('inc/scroll-to-top.php'); ?>  
+    <?php include('inc/scroll-to-top.php'); ?>
     <!-- scroll-to-top end -->
-
     <!-- STAR ANIMATION -->
     <?php include('inc/star-animation.php'); ?>
     <!-- / STAR ANIMATION -->
-
     <div class="page-wrapper">
-        <!-- header-section start  -->
-        <?php include('inc/header.php'); ?>    
-        <!-- header-section end  -->
+        <!-- header-section start -->
+        <?php include('inc/header.php'); ?>
+        <!-- header-section end -->
 
         <!-- account section start -->
         <div class="account-section bg_img" data-background="assets/images/bg/bg-5.jpg">
@@ -36,8 +30,9 @@
                     <div class="col-xl-5 col-lg-7">
                         <div class="account-card">
                             <div class="account-card__header bg_img overlay--one" data-background="assets/images/bg/bg-6.jpg">
-                                <h2 class="section-title">Welcome to <span class="base--color">NEXUS INSIGHTS</span></h2>
-                                <p>Enter Your Email and Password to Log In</p>
+                                <h2 class="section-title">Welcome to <span class="base--color"><?= $settings->siteTitle ?></span></h2>
+                                <p>Login to invest in medical equipment contracts and earn while saving lives</p>
+                                
                                 <?php
                                     if(isset($_SESSION['error'])){
                                         echo "<div class='callout callout-danger text-center'><p>".$_SESSION['error']."</p></div>";
@@ -50,15 +45,15 @@
                                 ?>
                             </div>
                             <div class="account-card__body">
-                                <h3 class="text-center">Login</h3>
+                                <h3 class="text-center">Login to Your Account</h3>
                                 <form class="mt-4" method="post" action="admin/verify.php">
                                     <div class="form-group">
-                                        <label>Email</label>
+                                        <label>Email Address</label>
                                         <input type="email" class="form-control" placeholder="Enter your email" name="email" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Password</label>
-                                        <input type="password" class="form-control" placeholder="Enter password" name="password" required>
+                                        <input type="password" class="form-control" placeholder="Enter your password" name="password" required>
                                     </div>
                                     <div class="form-row">
                                         <div class="col-sm-12">
@@ -68,14 +63,18 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-6 text-sm-left">
-                                            <p class="f-size-14">Don't have an account? <a href="register" class="base--color">Sign Up</a></p>
+                                            <p class="f-size-14">Don't have an account? 
+                                                <a href="register" class="base--color">Sign Up</a>
+                                            </p>
                                         </div>
                                         <div class="col-sm-6 text-sm-right">
-                                            <p class="f-size-14">Forgot password? <a href="password_forgot" class="base--color">Click Here</a> to reset your password</p>
+                                            <p class="f-size-14">Forgot password? 
+                                                <a href="password_forgot" class="base--color">Reset Password</a>
+                                            </p>
                                         </div>
                                     </div>
-                                    <div class="mt-3">
-                                        <button type="submit" name="login" class="cmn-btn">Login Now</button>
+                                    <div class="mt-4">
+                                        <button type="submit" name="login" class="cmn-btn btn-block">Login Now</button>
                                     </div>
                                 </form>
                             </div>
@@ -90,7 +89,7 @@
         <?php include('inc/footer.php'); ?>
         <!-- footer section end -->
     </div> <!-- page-wrapper end -->
-
+    
     <?php include('inc/scripts.php') ?>
 </body>
 </html>
