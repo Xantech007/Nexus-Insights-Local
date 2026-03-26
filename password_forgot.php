@@ -1,90 +1,88 @@
 <?php
     include('init.php');
-
     if(isset($_SESSION['user'])){
-      header('location: account/dashboard.php');
-   }
-
+        header('location: account/dashboard.php');
+    }
     $page_name = 'Password Reset';
     $page_parent = 'Account';
-    $page_title = 'Welcome to the Official Website of '.$settings->siteTitle;
-    $page_description = $settings->siteTitle.' provides quality infrastructure backed high-performance cloud computing services for cryptocurrency mining. Choose a plan to get started today! What are you waiting for? Together We Grow!...';
+    $page_title = 'Reset Password - '.$settings->siteTitle;
+    $page_description = $settings->siteTitle . ' - Forgot your password? Enter your email to reset it and continue investing in medical equipment supply contracts for hospitals.';
     include('inc/head.php');
-
 ?>
-  <body>
+<body>
     <!--========== Preloader ==========-->
-  
-  <!--========== Preloader ==========-->
+    <!--========== Preloader ==========-->
+    <!-- scroll-to-top start -->
+    <?php include('inc/scroll-to-top.php'); ?>
+    <!-- scroll-to-top end -->
+    <!-- STAR ANIMATION -->
+    <?php include('inc/star-animation.php'); ?>
+    <!-- / STAR ANIMATION -->
+    <div class="page-wrapper">
+        <?php include('inc/header.php') ?>
 
-  <!-- scroll-to-top start -->
-  <?php include('inc/scroll-to-top.php'); ?>  
-  <!-- scroll-to-top end -->
-
-  <!-- STAR ANIMATION -->
-  <?php include('inc/star-animation.php'); ?>
-  <!-- / STAR ANIMATION -->
-
-  <div class="page-wrapper">
-  <?php include('inc/header.php') ?>
-
-    <!-- account section start -->
-    <div class="account-section bg_img" data-background="assets/images/bg/bg-5.jpg">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-xl-5 col-lg-7">
-            <div class="account-card">
-              <div class="account-card__header bg_img overlay--one" data-background="assets/images/bg/bg-6.jpg">
-                <h2 class="section-title"><span class="base--color">NEXUS INSIGHTS</span></h2>
-                <p>Enter email associated with account</p>
-                <?php
-                    if(isset($_SESSION['error'])){
-                      echo "
-                        <div class='callout callout-danger text-center'>
-                          <p>".$_SESSION['error']."</p> 
+        <!-- account section start -->
+        <div class="account-section bg_img" data-background="assets/images/bg/bg-5.jpg">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5 col-lg-7">
+                        <div class="account-card">
+                            <div class="account-card__header bg_img overlay--one" data-background="assets/images/bg/bg-6.jpg">
+                                <h2 class="section-title">Reset Your Password</h2>
+                                <p>Enter the email associated with your <?= $settings->siteTitle ?> account</p>
+                                
+                                <?php
+                                    if(isset($_SESSION['error'])){
+                                        echo "
+                                            <div class='callout callout-danger text-center'>
+                                                <p>".$_SESSION['error']."</p>
+                                            </div>
+                                        ";
+                                        unset($_SESSION['error']);
+                                    }
+                                    if(isset($_SESSION['success'])){
+                                        echo "
+                                            <div class='callout callout-success text-center'>
+                                                <p>".$_SESSION['success']."</p>
+                                            </div>
+                                        ";
+                                        unset($_SESSION['success']);
+                                    }
+                                ?>
+                            </div>
+                            <div class="account-card__body">
+                                <form class="mt-4" method="post" action="reset.php">
+                                    <div class="form-group">
+                                        <label>Email Address</label>
+                                        <input type="email" class="form-control" placeholder="Enter your registered email" name="email" required>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button type="submit" name="reset" class="cmn-btn btn-block">Send Reset Link</button>
+                                    </div>
+                                    <div class="form-row mt-4">
+                                        <div class="col-sm-6 text-sm-left">
+                                            <p class="f-size-14">Don't have an account? 
+                                                <a href="register" class="base--color">Sign Up</a>
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-6 text-sm-right">
+                                            <p class="f-size-14">Remember your password? 
+                                                <a href="login" class="base--color">Login Here</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                      ";
-                      unset($_SESSION['error']);
-                    }
-                    if(isset($_SESSION['success'])){
-                      echo "
-                        <div class='callout callout-success text-center'>
-                          <p>".$_SESSION['success']."</p> 
-                        </div>
-                      ";
-                      unset($_SESSION['success']);
-                    }
-                ?>
-              </div>
-              <div class="account-card__body">
-                <form class="mt-4" method="post" action="reset.php">
-                  <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" class="form-control" placeholder="Enter your email" name="email" required>
-                  </div>
-                  <div class="mt-3">
-                    <button type="submit" name="reset" class="cmn-btn">Reset Password</button>
-                  </div>
-                  <div class="form-row mt-3">
-                    <div class="col-sm-6 text-sm-left">
-                      <p class="f-size-14">Don't have an account? <a href="register" class="base--color">Sign Up</a></p>
                     </div>
-                    <div class="col-sm-6 text-sm-right">
-                      <p class="f-size-14">Remember password? <a href="login" class="base--color">Click Here</a></p>
-                    </div>
-                  </div>
-                </form>
-              </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <!-- account section end -->
-  <?php include('inc/footer.php') ?>
-  </div> <!-- page-wrapper end -->
-  <?php include('inc/scripts.php') ?>
-  </body>
+        <!-- account section end -->
 
-<!-- Mirrored from template.viserlab.com/hyiplab/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Oct 2021 16:37:40 GMT -->
+        <?php include('inc/footer.php') ?>
+    </div> <!-- page-wrapper end -->
+    
+    <?php include('inc/scripts.php') ?>
+</body>
 </html>
