@@ -322,8 +322,8 @@ include('includes/menubar.php');
     </section>
   </div>
 
-  <?php include 'includes/livechat_modal.php'; ?>
-  <?php include 'includes/reply_modal.php'; ?>
+  <?php include 'includes/cs_modal.php'; ?>
+  <?php include 'includes/cs_reply_modal.php'; ?>
   <?php include 'includes/footer.php'; ?>
   <?php include 'includes/scripts.php'; ?>
 </div>
