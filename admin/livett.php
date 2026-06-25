@@ -1,6 +1,4 @@
 <?php
-echo "START";
-exit;
 
 // Include session and dependencies
 include('includes/session.php');
