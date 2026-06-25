@@ -38,10 +38,10 @@ $sweet_url = 'nexus-insights.gt.tc';
 $smtpConfig = [
     'host' => 'smtp.gmail.com', // nexusinsights.it.com
     'port' => 587,        // From screenshot (SMTP Port)
-    'username' => 'info.nexusinsights.itcom@gmail.com', // From screenshot
-    'password' => 'dvgeftqdwjwdolcf',       // Placeholder, replace with actual password
+    'username' => 'cs.nexus.insights@gmail.com', // From screenshot
+    'password' => 'ufaffoifxyhzjkrl',       // Placeholder, replace with actual password
     'secure' => 'tls',    // From screenshot (SSL/TLS recommended)
-    'fromEmail' => 'info.nexusinsights.itcom@gmail.com', // Must match username
+    'fromEmail' => 'cs.nexus.insights@gmail.com', // Must match username
     'fromName' => 'Nexus Insights'             // Matches siteTitle
 ];
 
