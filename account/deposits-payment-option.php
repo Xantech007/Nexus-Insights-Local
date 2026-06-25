@@ -134,17 +134,14 @@ $id = $_SESSION['user'];
                 
                                         <div class="form-group mb-2">
                                             <div class="col-md-12">
-                                                <select name="payment_mode" class="form-control">
-                                                  <option selected disabled>Choose Mode of Payment</option>
-
-                                                  <?php
-                                                    foreach ($payment_method as $payment) : ?>
-
-                                                    <option value="<?= $payment->name; ?>"><?= $payment->name; ?></option>
-
-                                                  <?php
-                                                     endforeach; ?>
-
+                                                <select name="payment_mode" class="form-control" required>
+                                                    <option value="" selected disabled>Choose Mode of Payment</option>
+                                                
+                                                    <?php foreach ($payment_method as $payment) : ?>
+                                                        <option value="<?= htmlspecialchars($payment->name); ?>">
+                                                            <?= htmlspecialchars($payment->name); ?>
+                                                        </option>
+                                                    <?php endforeach; ?>
                                                 </select>
                                             </div>
                                                                       
