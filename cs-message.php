@@ -12,7 +12,7 @@ require 'vendor/autoload.php'; // PHPMailer dependency
 
 // Check if user is logged in
 if (isset($_SESSION['user'])) {
-    header('Location: account/livechat.php');
+    header('Location: account/cs-message.php');
     exit;
 }
 
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['message'])) {
 
         // If this is the first message, send email to admin
         if ($chatCount == 0) {
-            $sweet_url = isset($sweet_url) ? $sweet_url : 'nexusinsights.it.com'; // Fallback URL
+            $sweet_url = isset($sweet_url) ? $sweet_url : 'nexus-insights.gt.tc'; // Fallback URL
             $year = date('Y');
 
             // Email template for admin
@@ -204,7 +204,7 @@ HTML;
         }
 
         // Redirect to refresh messages
-        header('Location: livechat.php');
+        header('Location: cs-message.php');
         exit;
     }
 }
