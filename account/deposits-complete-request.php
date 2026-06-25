@@ -45,7 +45,22 @@
 ?>
 
 <body>
-    <?php include('inc/sidebar.php'); ?>
+
+    <style>
+        #walletAddress{
+            font-size:14px;
+            font-weight:600;
+            overflow-x:auto;
+            white-space:nowrap;
+            cursor:pointer;
+            background:#f8f9fa;
+        }
+    
+        .input-group{
+            flex-wrap:nowrap;
+        }
+    </style>
+        <?php include('inc/sidebar.php'); ?>
 
     <div class="page-wrapper">
         <?php include('inc/header.php'); ?>
