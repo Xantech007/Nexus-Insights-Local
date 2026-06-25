@@ -1,7 +1,4 @@
 <?php
-//sitewide error reporting
-error_reporting(-1);
-ini_set('display_errors', 'on');
 
 //Get User IP and location of user
 $client_ip = getenv('HTTP_CLIENT_IP')?:
