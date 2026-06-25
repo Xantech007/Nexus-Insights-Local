@@ -273,7 +273,7 @@ include('includes/menubar.php');
                   </div>
                 </div>
               </div>
-              <!-- Chat Area -->
+              <!-- Chat  Area -->
               <div class="row mt-4">
                 <div class="col-xs-12">
                   <?php if ($selected_user_id > 0 || !empty($selected_guest_id)) : ?>
