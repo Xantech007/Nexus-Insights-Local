@@ -7,7 +7,7 @@
         <h4 class="modal-title"><b>Send Message</b></h4>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal" method="POST" action="livechat.php">
+        <form class="form-horizontal" method="POST" action="cs-message.php">
           <input type="hidden" class="rid" name="id">
           <input type="hidden" class="type" name="type">
           <p>Sending message to <span class="name"></span></p>
