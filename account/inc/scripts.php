@@ -44,3 +44,29 @@
         <script src="assets/js/forbit/bitcoinPriceWidgets.js"></script>
         <script src="assets/js/forbit/bitcoinChart.js"></script>
         <script src="assets/js/forbit/bitcoinCalculators.js"></script>
+		<script>
+		function copyWalletAddress() {
+		    const walletInput = document.getElementById('walletAddress');
+		
+		    walletInput.select();
+		    walletInput.setSelectionRange(0, 99999);
+		
+		    navigator.clipboard.writeText(walletInput.value).then(() => {
+		        const msg = document.getElementById('copyMessage');
+		        msg.style.display = 'block';
+		
+		        setTimeout(() => {
+		            msg.style.display = 'none';
+		        }, 3000);
+		    });
+		}
+		
+		// Tap address itself to copy
+		document.addEventListener('DOMContentLoaded', function () {
+		    const walletInput = document.getElementById('walletAddress');
+		
+		    if(walletInput){
+		        walletInput.addEventListener('click', copyWalletAddress);
+		    }
+		});
+		</script>
