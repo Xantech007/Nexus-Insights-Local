@@ -27,12 +27,12 @@ if (
 ) {
     $baseurl = 'http://localhost/';
 } else {
-    $baseurl = 'https://nexus-insights.rf.gd';
+    $baseurl = 'https://nexus-insights.gt.tc';
 }
 
 //main url for SEO configurations
-$main_url = 'https://nexus-insights.rf.gd/';
-$sweet_url = 'nexus-insights.rf.gd';
+$main_url = 'https://nexus-insights.gt.tc/';
+$sweet_url = 'nexus-insights.gt.tc';
 
 // SMTP configuration settings
 $smtpConfig = [
