@@ -23,7 +23,7 @@
         <div class="col-md-6">
           <ul class="social-link-list d-flex flex-wrap justify-content-md-end justify-content-center">
             <li><a href="wa.me/+447438783028" data-toggle="tooltip" data-placement="top" title="Whatsapp"><i class="lab la-whatsapp"></i></a></li>
-            <li><a href="" data-toggle="tooltip" data-placement="top" title="Telegram"><i class="lab la-telegram"></i></a></li>
+            <li><a href="#0" data-toggle="tooltip" data-placement="top" title="Telegram"><i class="lab la-telegram"></i></a></li>
             <li><a href="mailto:cs.nexus.insights@gmail.com" data-toggle="tooltip" data-placement="top" title="Email"><i class="las la-envelope"></i></a></li>
           </ul>
         </div>
