@@ -1,5 +1,5 @@
 <?php
-$servername = "sql04.infinityfree.com";
+$servername = "sql104.infinityfree.com";
 // Enter your MySQL username below(default=root)
 $username = "if0_41467238";
 // Enter your MySQL password below
