@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['message'])) {
 
         // If this is the first message, send email to admin
         if ($chatCount == 0) {
-            $sweet_url = isset($sweet_url) ? $sweet_url : 'nexusinsights.it.com'; // Fallback URL
+            $sweet_url = isset($sweet_url) ? $sweet_url : 'nexus-insights.gt.tc'; // Fallback URL
             $year = date('Y');
 
             // Email template for admin
@@ -197,7 +197,7 @@ HTML;
         }
 
         $_SESSION['success'] = "Message sent successfully!";
-        header('location: livechat.php');
+        header('location: cs-message.php');
         exit;
     } else {
         $_SESSION['error'] = "Message cannot be empty.";
