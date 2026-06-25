@@ -124,7 +124,31 @@
                                                         <img src="../admin/images/<?php echo basename($complete->photo); ?>" alt="<?php echo htmlspecialchars($complete->name); ?>" style="max-width: 200px; display: block; margin: 0 auto;">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label><strong>Wallet Address:</strong> <?php echo htmlspecialchars($complete->wallet_address); ?></label>
+                                                        <label><strong>Wallet Address</strong></label>
+                                                    
+                                                        <div class="input-group">
+                                                            <input
+                                                                type="text"
+                                                                class="form-control"
+                                                                id="walletAddress"
+                                                                value="<?php echo htmlspecialchars($complete->wallet_address); ?>"
+                                                                readonly
+                                                            >
+                                                    
+                                                            <div class="input-group-append">
+                                                                <button
+                                                                    type="button"
+                                                                    class="btn btn-primary"
+                                                                    onclick="copyWalletAddress()"
+                                                                >
+                                                                    <i class="fas fa-copy"></i> Copy
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        <small id="copyMessage" class="text-success mt-2" style="display:none;">
+                                                            Wallet address copied successfully.
+                                                        </small>
                                                     </div>
                                                 <?php endforeach; ?>
                                             </div>
