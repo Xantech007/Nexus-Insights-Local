@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['message']) && (isset(
     }
     // Redirect to the same user/guest chat
     $redirect_param = $user_id > 0 ? "user_id=$user_id" : "guest_id=" . urlencode($guest_id);
-    header("location: livechat.php?$redirect_param");
+    header("location: cs-message.php?$redirect_param");
     exit;
 }
 
@@ -193,7 +193,7 @@ include('includes/menubar.php');
                           <?php foreach ($users as $user) : ?>
                             <tr class="<?php echo $selected_user_id == $user->id ? 'selected-row' : ''; ?>">
                               <td>
-                                <a href="livechat.php?user_id=<?php echo urlencode($user->id); ?>" 
+                                <a href="cs-message.php?user_id=<?php echo urlencode($user->id); ?>" 
                                    title="View chat for User ID <?php echo htmlspecialchars($user->id); ?>">
                                    <?php echo htmlspecialchars($user->id); ?>
                                 </a>
@@ -242,7 +242,7 @@ include('includes/menubar.php');
                           <?php foreach ($guests as $guest) : ?>
                             <tr class="<?php echo $selected_guest_id == $guest->guest_id ? 'selected-row' : ''; ?>">
                               <td>
-                                <a href="livechat.php?guest_id=<?php echo urlencode($guest->guest_id); ?>" 
+                                <a href="cs-message.php?guest_id=<?php echo urlencode($guest->guest_id); ?>" 
                                    title="View chat for Guest ID <?php echo htmlspecialchars($guest->guest_id); ?>">
                                    <?php echo htmlspecialchars(substr($guest->guest_id, 0, 8)); ?>...
                                 </a>
