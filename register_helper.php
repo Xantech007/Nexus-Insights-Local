@@ -159,14 +159,16 @@ HTML;
 $conn = $pdo->open();
 
 if (isset($_POST['signup'])) {
-    $full_name = $_POST['full_name'] ?? '';
-    $username = $_POST['username'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $password = $_POST['password'] ?? '';
+
+    $full_name = trim($_POST['full_name'] ?? '');
+    $username  = trim($_POST['username'] ?? '');
+    $email     = trim($_POST['email'] ?? '');
+    $password  = $_POST['password'] ?? '';
     $repassword = $_POST['repassword'] ?? '';
-    $referral = empty($_POST['referral']) ? 'nexusinsights' : $_POST['referral'];
+    $referral = empty($_POST['referral']) ? 'nexusinsights' : trim($_POST['referral']);
+
     $type = 0;
-    $status = 1;
+    $status = 1; // AUTO-ACTIVATE
 
     $_SESSION['full_name'] = $full_name;
     $_SESSION['username'] = $username;
@@ -186,24 +188,20 @@ if (isset($_POST['signup'])) {
         exit;
     }
 
-    // Check if email is already taken
+    // Check email
     $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM users WHERE email=:email");
     $stmt->execute(['email' => $email]);
-    $row = $stmt->fetch();
-
-    if ($row['numrows'] > 0) {
+    if ($stmt->fetch()['numrows'] > 0) {
         $_SESSION['error'] = 'Email already taken';
         header('location: register.php');
         $pdo->close();
         exit;
     }
 
-    // Check if username is already taken
+    // Check username
     $stmt = $conn->prepare("SELECT COUNT(*) AS numrows FROM users WHERE uname=:username");
     $stmt->execute(['username' => $username]);
-    $row = $stmt->fetch();
-
-    if ($row['numrows'] > 0) {
+    if ($stmt->fetch()['numrows'] > 0) {
         $_SESSION['error'] = 'Username already taken';
         header('location: register.php');
         $pdo->close();
@@ -213,94 +211,48 @@ if (isset($_POST['signup'])) {
     $now = date('Y-m-d');
     $password_hashed = password_hash($password, PASSWORD_DEFAULT);
 
-    // Generate activation code
-    $set = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
     try {
-        $stmt = $conn->prepare("INSERT INTO users (email, password, full_name, uname, referral_code, activate_code, created_on, type, status) VALUES (:email, :password, :full_name, :username, :referral, :code, :now, :type, :status)");
+
+        $stmt = $conn->prepare("INSERT INTO users 
+            (email, password, full_name, uname, referral_code, created_on, type, status) 
+            VALUES 
+            (:email, :password, :full_name, :username, :referral, :now, :type, :status)");
+
         $stmt->execute([
             'email' => $email,
             'password' => $password_hashed,
             'full_name' => $full_name,
             'username' => $username,
             'referral' => $referral,
-            'code' => $code,
             'now' => $now,
             'type' => $type,
             'status' => $status
         ]);
+
         $userid = $conn->lastInsertId();
+
+        // AUTO LOGIN
+        session_regenerate_id(true);
         $_SESSION['user'] = $userid;
         $_SESSION['login_time'] = time();
-
         $_SESSION['email'] = $email;
         $_SESSION['name'] = $full_name;
 
-        // Store user data in session for potential resend
-        $_SESSION['resend_data'] = [
-            'email' => $email,
-            'full_name' => $full_name,
-            'username' => $username,
-            'userid' => $userid,
-            'code' => $code
-        ];
-
-        // Notify Admin
-        $msg = "New User Registered: {$email}, Login Admin";
-        $msg = wordwrap($msg, 70);
-        mail($settings->email2, "New User Alert", $msg);
-
-
+        // cleanup
         unset($_SESSION['full_name']);
         unset($_SESSION['username']);
         unset($_SESSION['email']);
 
-        $_SESSION['success'] = $email_sent 
-            ? 'Account created. Check your email to activate.<br>Didn\'t receive mail? <a href="resend_activation.php">Resend</a>'
-            : 'Account created, but email sending failed. <br>Click <a href="resend_activation.php">Resend</a> to try again.';
+        $_SESSION['success'] = 'Account created successfully';
+
         header('location: account/dashboard.php');
         exit;
+
     } catch (PDOException $e) {
-        if (strpos($e->getMessage(), 'unique_username') !== false) {
-            $_SESSION['error'] = 'Username already taken';
-        } else {
-            $_SESSION['error'] = 'An error occurred during registration. Please try again.';
-        }
+        $_SESSION['error'] = 'Registration failed. Please try again.';
         header('location: register.php');
+        exit;
     }
-} elseif (isset($_GET['resend']) && isset($_SESSION['resend_data'])) {
-    // Handle resend request
-    $resend_data = $_SESSION['resend_data'];
-    $email = $resend_data['email'];
-
-    // Verify user still exists and is not activated
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email=:email AND status=0");
-    $stmt->execute(['email' => $email]);
-    $user = $stmt->fetch();
-
-    if ($user) {
-        require 'vendor/autoload.php';
-        $success = sendActivationEmail(
-            $resend_data['email'],
-            $resend_data['full_name'],
-            $resend_data['username'],
-            $resend_data['userid'],
-            $resend_data['code'],
-            $sweet_url,
-            $settings,
-            $smtpConfig
-        );
-
-        $_SESSION['success'] = $success 
-            ? 'Activation email resent. Check your email to activate.<br>Didn\'t receive mail? <a href="resend_activation.php">Resend</a>'
-            : 'Failed to resend activation email. <br>Click <a href="resend_activation.php">Resend</a> to try again.';
-    } else {
-        $_SESSION['error'] = 'Invalid resend request or account already activated.';
-    }
-    header('location: register.php');
-} else {
-    $_SESSION['error'] = 'Fill up signup form first';
-    header('location: register.php');
 }
 
 $pdo->close();
