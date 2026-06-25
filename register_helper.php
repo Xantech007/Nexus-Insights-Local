@@ -166,7 +166,7 @@ if (isset($_POST['signup'])) {
     $repassword = $_POST['repassword'] ?? '';
     $referral = empty($_POST['referral']) ? 'nexusinsights' : $_POST['referral'];
     $type = 0;
-    $status = 0;
+    $status = 1;
 
     $_SESSION['full_name'] = $full_name;
     $_SESSION['username'] = $username;
@@ -215,7 +215,6 @@ if (isset($_POST['signup'])) {
 
     // Generate activation code
     $set = '123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $code = substr(str_shuffle($set), 0, 12);
 
     try {
         $stmt = $conn->prepare("INSERT INTO users (email, password, full_name, uname, referral_code, activate_code, created_on, type, status) VALUES (:email, :password, :full_name, :username, :referral, :code, :now, :type, :status)");
@@ -231,6 +230,11 @@ if (isset($_POST['signup'])) {
             'status' => $status
         ]);
         $userid = $conn->lastInsertId();
+        $_SESSION['user'] = $userid;
+        $_SESSION['login_time'] = time();
+
+        $_SESSION['email'] = $email;
+        $_SESSION['name'] = $full_name;
 
         // Store user data in session for potential resend
         $_SESSION['resend_data'] = [
@@ -246,9 +250,6 @@ if (isset($_POST['signup'])) {
         $msg = wordwrap($msg, 70);
         mail($settings->email2, "New User Alert", $msg);
 
-        // Send initial email
-        require 'vendor/autoload.php';
-        $email_sent = sendActivationEmail($email, $full_name, $username, $userid, $code, $sweet_url, $settings, $smtpConfig);
 
         unset($_SESSION['full_name']);
         unset($_SESSION['username']);
@@ -257,7 +258,8 @@ if (isset($_POST['signup'])) {
         $_SESSION['success'] = $email_sent 
             ? 'Account created. Check your email to activate.<br>Didn\'t receive mail? <a href="resend_activation.php">Resend</a>'
             : 'Account created, but email sending failed. <br>Click <a href="resend_activation.php">Resend</a> to try again.';
-        header('location: register.php');
+        header('location: account/dashboard.php');
+        exit;
     } catch (PDOException $e) {
         if (strpos($e->getMessage(), 'unique_username') !== false) {
             $_SESSION['error'] = 'Username already taken';
