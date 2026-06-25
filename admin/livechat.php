@@ -1,8 +1,5 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-echo "FILE REACHED";
+echo "START";
 exit;
 
 // Include session and dependencies
